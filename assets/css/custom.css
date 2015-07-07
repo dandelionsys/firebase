@@ -1,0 +1,82 @@
+/*
+ * Globals
+
+ #0098db;
+ */
+
+
+
+html, 
+
+/*
+.bs-docs-masthead {
+  background: url('../img/dandelion.svg') no-repeat center center;
+  height: 100%;
+  background-color: #333;
+} 
+*/
+
+.bs-docs-booticon-lg {
+  color: #ffffff;
+} 
+
+
+.bs-docs-footer {
+	padding-top:40px;padding-bottom:40px;margin-top:100px;color:#FFFFFF text-align:center;border-top:0px solid #e5e5e5}
+
+.bs-docs-masthead {
+  background-image: url("../img/svgojut.svg");
+  background-repeat: repeat-x;
+}
+
+/******************************************************
+	BUTTON SIZING
+******************************************************/
+
+
+.btn-lg {
+	padding: 30px 50px;
+	border-radius: 8px;
+	border-width: 2px
+	font-size: 24px;
+	font-weight: 700;
+	line-height: 2.0;
+	letter-spacing: 2px;
+}
+
+
+.btn.btn-outline.btn-lg {
+	padding: 30px 50px;
+	border-radius: 8px;
+	border-width: 2px
+	font-size: 24px;
+	font-weight: 700;
+	font-size: 24px;
+	line-height: 2.0;
+	letter-spacing: 2px;
+}
+
+
+.btn-lg.btn-outline-inverse, .btn-lg.outline{
+	padding: 30px 50px;
+	font-weight: 700;
+	font-size: larger;
+	letter-spacing: 2px;
+	border-color: #feff7c;
+	color: #feff7c
+}
+
+
+.btn-outline-inverse:hover{
+	color:#563d7c;
+	background-color:#fff;
+	border-color:#fff;
+	font-weight: 700;
+	letter-spacing: 2px;
+}
+
+
+
+
+
+                                                                                                                                                 

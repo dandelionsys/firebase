@@ -1,0 +1,49 @@
+<html>
+  <head>
+    <script src='https://cdn.firebase.com/js/client/2.2.1/firebase.js'></script>
+    <script src='https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js'></script>
+    <script src="assets/js/bootstrap.min.js"></script>
+    <!-- Bootstrap core CSS -->
+	<link rel="stylesheet" href="assets/css/bootstrap.min.css">
+	<link rel="stylesheet" href="assets/css/docs.min.css">
+	<link rel="stylesheet" href="assets/css/custom.css">
+  </head>
+  <body>
+<section id="chat" class='hero-section home-section section'>
+    <!-- Page content of course! -->
+    <main class="bs-docs-masthead" id="consulting">
+  <div class="container">
+    <h3 class="lead">By Skagit Community Action</h3>
+    <div class="lead">
+   
+    <h1>FDC Cooler Chat Now Open</h1>
+
+    </p>   
+  </div>
+    <div id='messagesDiv'></div>
+    <input type='text' id='nameInput' placeholder='Name'>
+    <input type='text' id='messageInput' placeholder='Message'>
+    <script>
+      var myDataRef = new Firebase('https://yi4jijreje7.firebaseio-demo.com/');
+      $('#messageInput').keypress(function (e) {
+        if (e.keyCode == 13) {
+          var name = $('#nameInput').val();
+          var text = $('#messageInput').val();
+          myDataRef.push({name: name, text: text});
+          $('#messageInput').val('');
+        }
+      });
+      myDataRef.on('child_added', function(snapshot) {
+        var message = snapshot.val();
+        displayChatMessage(message.name, message.text);
+      });
+      function displayChatMessage(name, text) {
+        $('<div/>').text(text).prepend($('<em/>').text(name+': ')).appendTo($('#messagesDiv'));
+        $('#messagesDiv')[0].scrollTop = $('#messagesDiv')[0].scrollHeight;
+      };
+    </script>
+    </div>
+</main>
+</section>
+  </body>
+</html>

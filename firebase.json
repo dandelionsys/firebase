@@ -1,0 +1,9 @@
+{
+  "firebase": "sfdcfridge",
+  "public": ".",
+  "ignore": [
+    "firebase.json",
+    "**/.*",
+    "**/node_modules/**"
+  ]
+}
