@@ -1,2 +1,2 @@
-# firebasecooler
-experimental
+# firebase
+experimental cooler
